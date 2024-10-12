@@ -1,0 +1,19 @@
+<button (click)="loadEmployees()">Employee List</button>
+<table *ngIf="employees.length > 0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Department</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.name}}</td>
+      <td>{{employee.position}}</td>
+      <td>{{employee.department}}</td>
+      <td>{{employee.email}}</td>
+    </tr>
+  </tbody>
+</table>
